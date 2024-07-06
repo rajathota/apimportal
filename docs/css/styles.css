@@ -1,0 +1,199 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #003366;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header .logo {
+    font-size: 1.5rem;
+}
+
+header input[type="text"] {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+header .user-profile {
+    position: relative;
+}
+
+header .user-profile span {
+    cursor: pointer;
+}
+
+header .user-profile .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+}
+
+header .user-profile:hover .dropdown {
+    display: block;
+}
+
+header nav a {
+    color: white;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+.sidebar {
+    background-color: #e0e0e0;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding-top: 60px;
+    overflow-y: auto;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.sidebar ul li ul {
+    display: none;
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+.sidebar ul li:hover ul {
+    display: block;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 2rem;
+}
+
+.hero {
+    background-color: #003366;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.hero button {
+    background-color: white;
+    color: #003366;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    margin: 1rem;
+}
+
+.featured-apis {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+
+.featured-apis .api-card {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem;
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.featured-apis .api-card button {
+    background-color: #003366;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.api-product-catalog {
+    margin-top: 2rem;
+}
+
+.api-product-catalog .product-category {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+}
+
+.api-product-catalog .product-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.api-analytics {
+    margin-top: 2rem;
+}
+
+.api-analytics .chart {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+}
+
+.resources {
+    margin-top: 2rem;
+}
+
+.resources .resource-block {
+    background-color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border: 1px solid #ccc;
+}
+
+.customer-stories {
+    margin-top: 2rem;
+}
+
+.customer-stories .carousel {
+    background-color: white;
+    padding: 2rem;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer .quick-links {
+    margin-bottom: 1rem;
+}
+
+footer .quick-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+footer .social-media-icons a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+}
