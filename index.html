@@ -1,59 +1,220 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Azure APIM Demo Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RajaThota Labs APIM Developer Portal</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1>Welcome to the Azure APIM Demo Website!</h1>
-    
-    <h2>APIs</h2>
-    <ul>
-        <li><a href="https://api.example.com/users">Users API</a></li>
-        <li><a href="https://api.example.com/products">Products API</a></li>
-        <li><a href="https://api.example.com/orders">Orders API</a></li>
-    </ul>
-    
-    <h2>Documentation</h2>
-    <ul>
-        <li><a href="https://docs.example.com/users">Users API Documentation</a></li>
-        <li><a href="https://docs.example.com/products">Products API Documentation</a></li>
-        <li><a href="https://docs.example.com/orders">Orders API Documentation</a></li>
-    </ul>
-    
-    <h2>Code Samples</h2>
-    <p>Here are some code samples to help you get started:</p>
-    
-    <h3>JavaScript</h3>
-    <pre><code>
-        // Fetch users from the API
-        fetch('https://api.example.com/users')
-            .then(response => response.json())
-            .then(data => console.log(data));
-    </code></pre>
-    
-    <h3>Python</h3>
-    <pre><code>
-        import requests
-        
-        # Fetch products from the API
-        response = requests.get('https://api.example.com/products')
-        data = response.json()
-        print(data)
-    </code></pre>
-    
-    <h3>Curl</h3>
-    <pre><code>
-        # Get orders from the API
-        curl https://api.example.com/orders
-    </code></pre>
-    
-    <h2>Contact</h2>
-    <p>If you have any questions or need support, please email us at <a href="mailto:support@example.com">support@example.com</a>.</p>
-
-    <h2>GitHub Pages Website</h2>
-    <p>For a demonstration of the Azure APIM customer portal, please visit our GitHub Pages website:</p>
-    <ul>
-        <li><a href="https://your-github-username.github.io/azure-apim-demo">Azure APIM Demo Website</a></li>
-    </ul>
+    <header>
+        <div class="logo">APIM Portal</div>
+        <input type="text" placeholder="Search...">
+        <div class="user-profile">
+            <span>User</span>
+            <div class="dropdown">
+                <ul>
+                    <li>Profile</li>
+                    <li>Settings</li>
+                    <li>Notifications</li>
+                    <li>Logout</li>
+                </ul>
+            </div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">API Catalog</a>
+            <a href="#">Documentation</a>
+            <a href="#">Support</a>
+            <a href="#">Blog</a>
+            <a href="#">Contact Us</a>
+        </nav>
+    </header>
+    <div class="sidebar">
+        <ul>
+            <li>Dashboard</li>
+            <li>API Management
+                <ul>
+                    <li>Overview</li>
+                    <li>Create API</li>
+                    <li>API Policies</li>
+                    <li>API Analytics</li>
+                </ul>
+            </li>
+            <li>Products
+                <ul>
+                    <li>Asset Management APIs</li>
+                    <li>Financial Services APIs</li>
+                    <li>Investment APIs</li>
+                    <li>Marketing APIs</li>
+                    <li>Employee Experience APIs</li>
+                    <li>Chatbots APIs</li>
+                </ul>
+            </li>
+            <li>Account
+                <ul>
+                    <li>Billing</li>
+                    <li>Usage</li>
+                    <li>Subscription Plans</li>
+                </ul>
+            </li>
+            <li>Resources
+                <ul>
+                    <li>API Documentation</li>
+                    <li>SDKs & Tools</li>
+                    <li>Code Samples</li>
+                    <li>Tutorials</li>
+                    <li>Community Forum</li>
+                </ul>
+            </li>
+            <li>Settings
+                <ul>
+                    <li>User Settings</li>
+                    <li>API Settings</li>
+                    <li>Security Settings</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <section class="hero">
+            <h1>Welcome to APIM Enterprise Portal</h1>
+            <p>Seamlessly integrate and manage APIs for your financial and asset management needs.</p>
+            <button>Explore API Catalog</button>
+            <button>Get Started</button>
+        </section>
+        <section class="featured-apis">
+            <h2>Featured APIs</h2>
+            <div class="api-card">
+                <h3>Asset Management API</h3>
+                <p>Manage assets efficiently with real-time data.</p>
+                <button>View API</button>
+            </div>
+            <div class="api-card">
+                <h3>Investment API</h3>
+                <p>Access investment opportunities and analytics.</p>
+                <button>View API</button>
+            </div>
+            <div class="api-card">
+                <h3>Marketing API</h3>
+                <p>Enhance your marketing strategies with data-driven APIs.</p>
+                <button>View API</button>
+            </div>
+            <div class="api-card">
+                <h3>Chatbot API</h3>
+                <p>Integrate intelligent chatbots into your services.</p>
+                <button>View API</button>
+            </div>
+        </section>
+        <section class="api-product-catalog">
+            <h2>API Product Catalog</h2>
+            <div class="product-category">
+                <h3>Asset Management</h3>
+                <ul>
+                    <li>Asset Data API</li>
+                    <li>Portfolio Management API</li>
+                    <li>Risk Assessment API</li>
+                </ul>
+            </div>
+            <div class="product-category">
+                <h3>Financial Services</h3>
+                <ul>
+                    <li>Banking API</li>
+                    <li>Payment Processing API</li>
+                    <li>Credit Scoring API</li>
+                </ul>
+            </div>
+            <div class="product-category">
+                <h3>Investments</h3>
+                <ul>
+                    <li>Stock Market API</li>
+                    <li>Mutual Fund API</li>
+                    <li>Real Estate Investment API</li>
+                </ul>
+            </div>
+            <div class="product-category">
+                <h3>Marketing</h3>
+                <ul>
+                    <li>Campaign Management API</li>
+                    <li>Customer Insights API</li>
+                    <li>Advertising API</li>
+                </ul>
+            </div>
+            <div class="product-category">
+                <h3>Employee Experience</h3>
+                <ul>
+                    <li>HR Management API</li>
+                    <li>Employee Engagement API</li>
+                    <li>Performance Tracking API</li>
+                </ul>
+            </div>
+            <div class="product-category">
+                <h3>Chatbots</h3>
+                <ul>
+                    <li>Natural Language Processing API</li>
+                    <li>Customer Support Bot API</li>
+                    <li>Virtual Assistant API</li>
+                </ul>
+            </div>
+        </section>
+        <section class="api-analytics">
+            <h2>API Analytics</h2>
+            <div class="chart">
+                <h3>API Usage Over Time</h3>
+                <!-- Placeholder for Chart -->
+            </div>
+            <div class="chart">
+                <h3>Request Success Rates</h3>
+                <!-- Placeholder for Chart -->
+            </div>
+            <div class="chart">
+                <h3>Response Times</h3>
+                <!-- Placeholder for Chart -->
+            </div>
+            <div class="chart">
+                <h3>Top APIs by Usage</h3>
+                <!-- Placeholder for Chart -->
+            </div>
+        </section>
+        <section class="resources">
+            <h2>Resources & Documentation</h2>
+            <div class="resource-block">
+                <h3>Getting Started Guide</h3>
+            </div>
+            <div class="resource-block">
+                <h3>API Reference</h3>
+            </div>
+            <div class="resource-block">
+                <h3>SDKs & Tools</h3>
+            </div>
+            <div class="resource-block">
+                <h3>Tutorials</h3>
+            </div>
+            <div class="resource-block">
+                <h3>Community Forum</h3>
+            </div>
+        </section>
+        <section class="customer-stories">
+            <h2>Success Stories</h2>
+            <div class="carousel">
+                <!-- Placeholder for Customer Testimonials and Case Studies -->
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="quick-links">
+            <a href="#">About Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Help Center</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="social-media-icons">
+            <a href="#">LinkedIn</a>
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">YouTube</a>
+        </div>
+    </footer>
 </body>
 </html>
