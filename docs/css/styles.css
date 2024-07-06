@@ -2,198 +2,123 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0f0;
+    color: #333;
+    background-color: #f5f5f5;
 }
 
 header {
-    background-color: #003366;
-    color: white;
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    background-color: #001f3f;
+    color: #ffffff;
+    padding: 10px 20px;
 }
 
-header .logo {
-    font-size: 1.5rem;
+.logo img {
+    height: 40px;
 }
 
-header input[type="text"] {
-    padding: 0.5rem;
-    font-size: 1rem;
+.header-title {
+    flex-grow: 1;
+    text-align: center;
 }
 
-header .user-profile {
-    position: relative;
+.header-title img {
+    height: 50px;
 }
 
-header .user-profile span {
-    cursor: pointer;
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-header .user-profile .dropdown {
-    display: none;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    color: black;
-    border: 1px solid #ccc;
+nav ul li {
+    margin-left: 20px;
 }
 
-header .user-profile:hover .dropdown {
-    display: block;
-}
-
-header nav a {
-    color: white;
-    margin-left: 1rem;
+nav ul li a {
+    color: #ffffff;
     text-decoration: none;
 }
 
-.sidebar {
-    background-color: #e0e0e0;
-    width: 250px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    padding-top: 60px;
-    overflow-y: auto;
+nav ul li a:hover {
+    text-decoration: underline;
 }
 
-.sidebar ul {
-    list-style-type: none;
+aside {
+    background-color: #ffffff;
+    padding: 15px;
+    width: 200px;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+aside ul {
+    list-style: none;
     padding: 0;
 }
 
-.sidebar ul li {
-    padding: 1rem;
-    cursor: pointer;
+aside ul li {
+    margin-bottom: 10px;
 }
 
-.sidebar ul li ul {
-    display: none;
-    list-style-type: none;
-    padding-left: 1rem;
+aside ul li a {
+    text-decoration: none;
+    color: #333;
 }
 
-.sidebar ul li:hover ul {
-    display: block;
+aside ul li a:hover {
+    text-decoration: underline;
 }
 
-.main-content {
-    margin-left: 250px;
-    padding: 2rem;
+main {
+    margin-left: 220px;
+    padding: 20px;
 }
 
-.hero {
-    background-color: #003366;
-    color: white;
-    padding: 2rem;
-    text-align: center;
+main h1, main h2 {
+    color: #001f3f;
 }
 
-.hero button {
-    background-color: white;
-    color: #003366;
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    margin: 1rem;
-}
-
-.featured-apis {
+.api-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 2rem;
+    gap: 20px;
 }
 
-.featured-apis .api-card {
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem;
-    flex: 1;
-    min-width: 200px;
-    border: 1px solid #ccc;
-    text-align: center;
+.api-item {
+    background-color: #ffffff;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.featured-apis .api-card button {
-    background-color: #003366;
-    color: white;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
+.api-item h3 {
+    margin-top: 0;
+    color: #001f3f;
 }
 
-.api-product-catalog {
-    margin-top: 2rem;
+.api-item a {
+    color: #007bff;
+    text-decoration: none;
 }
 
-.api-product-catalog .product-category {
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-}
-
-.api-product-catalog .product-category ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.api-analytics {
-    margin-top: 2rem;
-}
-
-.api-analytics .chart {
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-}
-
-.resources {
-    margin-top: 2rem;
-}
-
-.resources .resource-block {
-    background-color: white;
-    padding: 1rem;
-    margin: 1rem 0;
-    border: 1px solid #ccc;
-}
-
-.customer-stories {
-    margin-top: 2rem;
-}
-
-.customer-stories .carousel {
-    background-color: white;
-    padding: 2rem;
-    border: 1px solid #ccc;
+.api-item a:hover {
+    text-decoration: underline;
 }
 
 footer {
-    background-color: #003366;
-    color: white;
-    padding: 1rem;
+    background-color: #001f3f;
+    color: #ffffff;
     text-align: center;
-}
-
-footer .quick-links {
-    margin-bottom: 1rem;
-}
-
-footer .quick-links a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
-}
-
-footer .social-media-icons a {
-    color: white;
-    margin: 0 1rem;
-    text-decoration: none;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
