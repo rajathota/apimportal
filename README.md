@@ -1,4 +1,4 @@
-# APIM Enterprise Portal
+# Thota APIM Enterprise Portal
 
 This project is an API Management Portal designed for enterprise needs, particularly in the financial and asset management industries.
 
