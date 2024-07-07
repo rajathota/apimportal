@@ -12,6 +12,9 @@ header {
     background-color: #001f3f;
     color: #ffffff;
     padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 .logo img {
