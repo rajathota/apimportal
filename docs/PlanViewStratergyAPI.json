@@ -10,7 +10,6 @@
       "post": {
         "summary": "Invoke initiative action in Workday",
         "description": "Endpoint to send data to RPA to invoke the initiative action in Workday.",
-        "x-redoc-tryout": true, // Add the x-redoc-tryout extension here
         "requestBody": {
           "description": "JSON payload containing the initiative details to invoke in Workday.",
           "required": true,
@@ -107,7 +106,6 @@
       "post": {
         "summary": "Send RPA process completion response to Planview",
         "description": "Endpoint to send the response from RPA to Planview for process completion.",
-        "x-redoc-tryout": true, // Add the x-redoc-tryout extension here
         "requestBody": {
           "description": "JSON payload containing the RPA process completion details.",
           "required": true,
@@ -209,17 +207,114 @@
       }
     }
   },
-  {
-    "openapi": "3.0.3",
-    "info": {
-      "title": "Initiative Management API",
-      "version": "1.0.0",
-      // Security schemes definition...
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/InitiativeRequest"
-                },
-                ""initiative:invoke", "process:completion"examples": {
-                  "InitiativeRequestExample": {
-                    "summary": "Example payload for invoking initiative action",
+  "components": {
+    "schemas": {
+      "InitiativeRequest": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/Initiative"
+        }
+      },
+      "InitiativeResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "success"
+          },
+          "message": {
+            "type": "string",
+            "example": "Initiatives processed successfully."
+          }
+        }
+      },
+      "ErrorResponse": {
+        "type": "object",
+        "properties": {
+          "status": {
+            "type": "string",
+            "example": "error"
+          },
+          "message": {
+            "type": "string",
+            "example": "Invalid input."
+          }
+        }
+      },
+      "Initiative": {
+        "type": "object",
+        "properties": {
+          "action": {
+            "type": "string",
+            "enum": ["add", "update"],
+            "description": "Action to be performed (add or update)."
+          },
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the initiative."
+          },
+          "descriptor": {
+            "type": "string",
+            "description": "Description of the initiative."
+          },
+          "startDate": {
+            "type": "string",
+            "format": "date",
+            "description": "Start date of the initiative."
+          },
+          "endDate": {
+            "type": "string",
+            "format": "date",
+            "description": "End date of the initiative."
+          },
+          "owner": {
+            "type": "string",
+            "description": "Owner of the initiative."
+          },
+          "addProjects": {
+            "type": "array",
+            "description": "List of projects to add to the initiative.",
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            }
+          },
+          "deleteProjects": {
+            "type": "array",
+            "description": "List of projects to remove from the initiative.",
+            "items": {
+              "$ref": "#/components/schemas/Project"
+            }
+          }
+        }
+      },
+      "Project": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier for the project."
+          }
+        }
+      }
+    },
+    "securitySchemes": {
+      "oauth2": {
+        "type": "oauth2",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://login.microsoftonline.com/{tenant-id}/oauth2/v2.0/token",
+            "scopes": {
+              "initiative:invoke": "Invoke initiative action",
+              "process:completion": "Record process completion"
+            }
+          }
+        }
+      }
+    }
+  },
+  "security": [
+    {
+      "oauth2": ["initiative:invoke", "process:completion"]
+    }
+  ]
 }
