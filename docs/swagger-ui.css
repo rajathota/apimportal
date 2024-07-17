@@ -1,0 +1,86 @@
+/* Customizing sub and sup elements */
+.swagger-ui sub,
+.swagger-ui sup {
+  font-size: 90%; /* Slightly larger than before */
+  color: #004578; /* Changing color to a dark blue */
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+.swagger-ui sub {
+  bottom: -.25em;
+}
+
+.swagger-ui sup {
+  top: -.5em;
+}
+
+/* Ensuring media elements are displayed correctly */
+.swagger-ui audio,
+.swagger-ui video {
+  display: inline-block;
+}
+
+.swagger-ui audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+.swagger-ui img {
+  border-style: none;
+}
+
+.swagger-ui svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Customizing form elements */
+.swagger-ui button,
+.swagger-ui input,
+.swagger-ui optgroup,
+.swagger-ui select,
+.swagger-ui textarea {
+  font-family: 'Arial', sans-serif; /* Changing font family to Arial */
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+  color: #333; /* Darker text for better readability */
+  background-color: #f4f4f4; /* Light grey background */
+  border: 1px solid #ccc; /* Adding a subtle border */
+}
+
+.swagger-ui button,
+.swagger-ui input {
+  /* Additional customizations can be added here */
+}
+
+/* Changing primary color for Swagger UI elements */
+:root {
+  --swagger-ui-theme-primary-color: #007bff; /* New primary color */
+  --swagger-ui-theme-border-color: #007bff; /* Matching border color */
+}
+
+/* Customizing the appearance of buttons */
+.swagger-ui .btn {
+  background-color: #007bff; /* Primary button color */
+  color: white; /* Text color */
+  border-color: #0056b3; /* Darker border color for contrast */
+}
+
+/* Adjusting method colors */
+.swagger-ui .opblock-summary-post {
+  background-color: #007bff !important;
+}
+
+.swagger-ui .opblock-summary-get {
+  background-color: #28a745 !important;
+}
+
+.swagger-ui .opblock-summary-put {
+  background-color: #ffc107 !important;
+}
+
+.swagger-ui .opblock-summary-delete {
+  background-color: #dc3545 !important;
+}
