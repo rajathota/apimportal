@@ -3,30 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <title>Initiative Management API Documentation</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.14.0/swagger-ui.css" >
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.14.0/swagger-ui.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.14.0/swagger-ui-bundle.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/4.14.0/swagger-ui-standalone-preset.js"></script>
+    <style>
+        /* Customizing the primary color */
+        :root {
+            --swagger-ui-theme-primary-color: #004578; /* Franklin Templeton Blue */
+            --swagger-ui-theme-border-color: #004578; /* Adjusting border colors */
+        }
+        
+        /* Customizing header */
+        .swagger-ui .topbar {
+            background-color: #004578; /* Franklin Templeton Blue */
+            border-color: #004578; /* Adjusting border to match */
+        }
+        
+        /* Customizing button colors */
+        .swagger-ui .btn {
+            background-color: #0078D4; /* Lighter shade of blue */
+            border-color: #005A9E; /* Slightly darker shade for border */
+        }
+        
+        /* Adjusting text color for better contrast */
+        .swagger-ui .btn {
+            color: #ffffff; /* White text */
+        }
+    </style>
 </head>
 <body>
     <div id="swagger-ui"></div>
     <script>
-        window.onload = function() {
-            // Build a system
-            const ui = SwaggerUIBundle({
-                url: "./PlanViewStratergyAPI.json",
-                dom_id: '#swagger-ui',
-                deepLinking: true,
-                presets: [
-                    SwaggerUIBundle.presets.apis,
-                    SwaggerUIStandalonePreset
-                ],
-                plugins: [
-                    SwaggerUIBundle.plugins.DownloadUrl
-                ],
-                layout: "BaseLayout"
-            });
-            window.ui = ui;
-        };
+      window.onload = function() {
+        // Build a system
+        const ui = SwaggerUIBundle({
+          url: "./PlanViewStratergyAPI.json",
+          dom_id: '#swagger-ui',
+          deepLinking: true,
+          presets: [
+            SwaggerUIBundle.presets.apis,
+            SwaggerUIStandalonePreset
+          ],
+          layout: "BaseLayout" 
+        });
+        window.ui = ui;
+      };
     </script>
 </body>
 </html>
